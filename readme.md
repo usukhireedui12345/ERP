@@ -25,7 +25,22 @@ or clone from https://github.com/akshat4112/SchoolERP
 :point_right: Web Browser FF17.0+, IE8+, Opera, Chrome .... TODO testing
 
 
+## TypeScript Migration (In Progress)
+The TypeScript app currently includes sign-in, session handling, the admission register, enquiry entry/register/daily summary, fee-head and fee-plan setup, daily attendance entry and summaries, a navigable calendar, and administration master data for classes, sections, castes, categories, houses, families, and fee groups/categories. Other ERP modules still run in the original PHP application.
+
+To run the TypeScript app locally:
+
+1. Install Node.js 22.18 or newer and MySQL.
+2. From the project root, run `npm install`.
+3. Copy `.env.example` to `.env` and set `SESSION_SECRET` and your MySQL connection values.
+4. Import `school_erp.sql` into the configured `school_erp` database if it has not already been imported.
+5. Apply `migrations/001_create_enquiry_table.sql` to that database.
+6. Run `npm run dev` and open `http://127.0.0.1:3000`.
+
+The original PHP application remains available through the existing PHP setup while the TypeScript migration is underway.
+
 ## Resources
 * Documentation
 * Community
 * Bug Tracker
+# ERP
